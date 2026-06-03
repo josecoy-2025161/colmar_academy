@@ -1,0 +1,50 @@
+
+body {
+    font-family: sans-serif;
+    color: gray;
+}
+
+/*Navigation*/
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 0px 24px;
+    height: 64px;
+}
+
+.navigation strong {
+    color: black;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0px 1px;
+}
+
+.logo span {
+    font-size: 18px;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 0px 16px;
+    font-size: 18px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color:dimgray;
+}
+
+.nav-links a:hover {
+    color: black;
+}
+
+/*Hero Banner*/
+.hero {
+    background-color:lightgray;
+}
