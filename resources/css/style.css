@@ -1,3 +1,9 @@
+/*Reset de margin y padding*/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: sans-serif;
@@ -42,9 +48,54 @@ body {
 
 .nav-links a:hover {
     color: black;
+    text-decoration: underline;
 }
 
 /*Hero Banner*/
-.hero {
+header {
     background-color:lightgray;
+    display: flex;
+}
+
+/* El contenido padre de la imagen del hero ocupa 
+el 60% del espacio disponible segun el wireframe */
+.hero-image {
+    max-width: 60%;
+    padding: 32px 24px;
+}
+
+/*Ocupa el 100% del espacio disponible de su elemento padre
+que es el hero-image*/
+.hero-image img {
+    width: 100%;
+    /*llena tu espacio y recórtate si es necesario*/
+    object-fit: cover;
+    height: 100%;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:#424242;
+    padding: 32px 24px;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+}
+
+.hero-content p {
+    font-size: 22.4px;
+    margin: 24px 0px;
+}
+
+.hero-content .cta-button {
+    background-color: #424242;
+    color: white;
+    border: none;
+    padding: 16px 0px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 70%;
 }
