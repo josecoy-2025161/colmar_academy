@@ -1,4 +1,4 @@
-/*Reset de margin y padding*/
+/* Reset de margin y padding */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -10,7 +10,11 @@ body {
     color: gray;
 }
 
-/*Navigation*/
+/* ==========================================================================
+   Navbar (Desktop)
+   ========================================================================== */
+
+/* Navigation */
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -18,6 +22,12 @@ body {
     background-color: #fff;
     padding: 0px 24px;
     height: 64px;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    box-sizing: border-box; /* Evita que el padding sume ancho extra */
+    
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Asegura que pase por encima de las imágenes al hacer scroll */
 }
 
 .navigation strong {
@@ -27,18 +37,20 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 0px 1px;
+    gap: 0px 1px; /* Espacio entre el logo y el texto */
 }
 
 .logo span {
     font-size: 18px;
 }
 
-.navigation ul {
+.nav-links {
     list-style: none;
     display: flex;
-    gap: 0px 16px;
-    font-size: 18px;
+    gap: 16px; /* Espacio horizontal entre cada <li> */
+    font-size: 16px; 
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a{
@@ -51,7 +63,11 @@ body {
     text-decoration: underline;
 }
 
-/*Hero Banner*/
+/* ==========================================================================
+   Hero Banner (Desktop)
+   ========================================================================== */
+
+/* Hero Banner */
 header {
     background-color:lightgray;
     display: flex;
@@ -64,8 +80,8 @@ el 60% del espacio disponible segun el wireframe */
     padding: 32px 24px;
 }
 
-/*Ocupa el 100% del espacio disponible de su elemento padre
-que es el hero-image*/
+/* Ocupa el 100% del espacio disponible de su elemento padre
+que es el hero-image */
 .hero-image img {
     width: 100%;
     /*llena tu espacio y recórtate si es necesario*/
@@ -98,4 +114,109 @@ que es el hero-image*/
     font-size: 16px;
     cursor: pointer;
     width: 70%;
+}
+
+/* ==========================================================================
+   Description Section (Desktop)
+   ========================================================================== */
+
+.description {
+    display: flex;
+    flex-direction: row; /* Uno al lado del otro en desktop */
+}
+
+/* Parte Izquierda */
+.description-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #424242;
+    padding: 32px 24px; /* Padding general de la sección */
+    flex: 6; /* Toma 6 de 10 partes */
+}
+
+.description-content img {
+    width: 100%;
+    /*llena tu espacio y recórtate si es necesario*/
+    object-fit: cover;
+    height: auto;
+    margin-bottom: 32px; 
+}
+
+.description-content h2 {
+    font-size: 40px;
+    margin-bottom: 24px;
+}
+
+.description-content p {
+    font-size: 22px;
+    margin-bottom: 32px;
+    color: #808080;
+}
+
+.description-content small {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 32px;
+    color: #808080;
+}
+
+/* Parte Derecha */
+.description-side {
+    display: flex;
+    /* Stretch para que las tarjetas se estiren al 100% */
+    align-items: stretch;
+    flex-direction: column;
+    flex: 4; /* Toma 4 de 10 partes */
+    gap: 16px; /* Espaciado entre las cards */
+    padding-top: 32px;
+    border-left: 0.5px solid #e0e0e0; /* Línea divisoria entre izquierda y derecha */
+}
+
+/* Tarjetas horizontales */
+.description-side-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Alinea verticalmente imagen y texto */
+    background-color: #f5f5f5; 
+    width: 100%; /* Forzamos a la tarjeta a ocupar todo el ancho del contenedor */
+    word-wrap: break-word; /* Fuerza a las palabras largas a saltar de línea */
+    border: 0.5px solid #e0e0e0; /* Borde para delimitar la sección */
+}
+
+/* Imagen de la tarjeta (35% de ancho) */
+.description-side-card img {
+    width: 35%;
+    height: auto;
+    object-fit: cover;
+    display: block; /* Elimina espacios fantasma debajo de la imagen */
+}
+
+/* Texto de la tarjeta (65% de ancho) */
+.description-side-card .article-text {
+    width: 65%;
+    padding: 16px; /* Padding interno para que el texto no toque los bordes */
+    justify-content: center; /* Centra el texto verticalmente al lado de la imagen */
+}
+
+.description-side-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #424242;
+}
+
+.description-side-card p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.description-side-card a {
+    font-size: 16px;
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+.description-side-card a:hover {
+    color: blue;
+    text-decoration: underline;
 }
