@@ -194,6 +194,10 @@ que es el hero-image */
     display: block; /* Elimina espacios fantasma debajo de la imagen */
 }
 
+.description-side-card .mobile-img {
+    display: none;
+}
+
 /* Texto de la tarjeta (65% de ancho) */
 .description-side-card .article-text {
     width: 65%;
@@ -432,7 +436,7 @@ footer {
    Media Query (Mobile)
    ========================================================================== */
 
-   @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
 
     /* ==========================================================================
         Navbar (Mobile)
@@ -531,4 +535,79 @@ footer {
         color: white;
     }
 
-   }
+    /* ==========================================================================
+        Description (Mobile)
+    ========================================================================== */
+    
+    .description {
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    /* Se mantiene oculto el bloque de escritorio */
+    .description-content {
+        display: none;
+    }
+
+    /* Contenedor de tarjetas */
+    .description-side {
+        width: 100%;
+        flex: none;
+        border-left: none;
+    
+        /* imágenes NO se peguen a los bordes de la pantalla. */
+        padding: 16px 16px 0px 16px; 
+        box-sizing: border-box;
+        
+        margin-top: 16px;    
+        margin-bottom: 32px; 
+        gap: 32px;
+    }
+
+    /* Tarjetas */
+    .description-side-card {
+        flex-direction: column;       
+        background-color: transparent; 
+        border: none;                  
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    /* Oculta la imagen de escritorio */
+    .description-side-card img:not(.mobile-img) {
+        display: none;
+    }
+
+    /* Imagen móvil adaptada */
+    .description-side-card .mobile-img {
+        display: block;
+        width: 100%; 
+        height: auto;
+    }
+
+    /* Texto del artículo */
+    .description-side-card .article-text {
+        width: 100%;
+        padding: 16px 0px 0px 16px; 
+        box-sizing: border-box; /* Incluye el padding / margin en el width del contenedor*/
+    }
+
+    /* Ajuste de tipografías y márgenes internos */
+    .description-side-card h3 {
+        font-size: 20px;
+        margin: 0 0 8px 0; /* Espaciado sutil bajo el título */
+        color: #424242;
+    }
+
+    .description-side-card p {
+        font-size: 14px;
+        margin: 0 0 8px 0; /* Espaciado sutil bajo el párrafo */
+        color: #424242;
+        line-height: 1.4;
+    }
+
+    .description-side-card a {
+        font-size: 14px;
+        display: inline-block;
+    }
+}
