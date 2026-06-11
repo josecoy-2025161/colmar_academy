@@ -753,5 +753,29 @@ footer {
     /* ==========================================================================
         Footer (Mobile)
     ========================================================================== */
+
+    footer {
+        /* Cambia a bloque simple y reinicia alturas de desktop */
+        display: block; 
+        height: auto;
+        padding: 16px; 
+    }
+
+    .footer-container {
+        display: block; /* Rompe el inline-flex de escritorio */
+        width: 100%;
+    }
+
+    .footer-container p {
+        font-size: 12px;
+        color: #696969;   
+        margin: 0;  /* Resetea márgenes residuales del navegador */
+        text-align: left;
+    }
+
+    /* Oculta los enlaces en teléfonos */
+    .footer-links {
+        display: none;
+    }
     
 }
