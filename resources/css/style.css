@@ -759,6 +759,7 @@ footer {
         display: block; 
         height: auto;
         padding: 16px; 
+        border-top: 0.1px solid #808080;
     }
 
     .footer-container {
