@@ -359,7 +359,7 @@ que es el hero-image */
     align-items: center;
     align-content: center;
     justify-content: flex-start;
-    border: 0.5px black solid;
+    border: 0.5px solid black;
     margin-bottom: 16px;
 }
 
@@ -390,4 +390,35 @@ que es el hero-image */
 
 #thesis-fisma {
     background-color: #e0e0e0;
+}
+
+/* ==========================================================================
+   Footer Section (Desktop)
+   ========================================================================== */
+
+footer {
+    color: #696969;
+    font-size: 16px;
+    border-top: 0.1px solid #424242;
+    display: flex;
+    padding: 16px 24px;
+    height: 64px;
+}
+
+.footer-container {
+    display: inline-flex; /*Para que se muestren en la misma línea*/
+    width: 100%; /*Ocupa todo el ancho*/
+    justify-content: space-between; /*Para que se vayan a los extremos*/
+}
+
+
+.footer-links a {
+    color: #696969;
+    text-decoration: none;
+    padding-left: 12px;
+}
+
+.footer-links a:hover {
+    color: black;
+    text-decoration: underline;
 }
