@@ -259,6 +259,7 @@ que es el hero-image */
     height: auto;
     margin: 16px;
     padding-bottom: 18px;
+    word-wrap: break-word; /* Fuerza a las palabras largas a saltar de línea */
 }
 
 .course-card img {
