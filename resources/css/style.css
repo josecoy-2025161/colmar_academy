@@ -14,7 +14,6 @@ body {
    Navbar (Desktop)
    ========================================================================== */
 
-/* Navigation */
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -67,7 +66,6 @@ body {
    Hero Banner (Desktop)
    ========================================================================== */
 
-/* Hero Banner */
 header {
     background-color:lightgray;
     display: flex;
@@ -281,4 +279,115 @@ que es el hero-image */
     font-size: 22px;
     margin-left: 16px;
     margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   Thesis Section (Desktop)
+   ========================================================================== */
+   
+.thesis-exhibition {
+    width: 100%;
+    padding: 32px 24px;
+}
+
+.thesis-title {
+    text-align: center;
+    padding-bottom: 32px;
+}
+
+.thesis-title h2 {
+    font-size: 40px;
+    color: #424242;
+}
+
+.thesis-container {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.thesis-content-left {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-right: 24px;
+}
+
+
+.thesis-content-left video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    padding-bottom: 0;
+}
+
+.thesis-words {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.thesis-words h2 {
+    font-size: 40px;
+    color:#424242;
+    padding-top: 24px;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.thesis-words p {
+    padding-top: 8px;
+    margin: 0;
+    font-size: 22px;
+}
+
+.thesis-content-right {
+    width: 40%;
+    height: auto;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.thesis-card {
+    max-width: 100%;
+    text-align: left;
+    height: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    border: 0.5px black solid;
+    margin-bottom: 16px;
+}
+
+.thesis-card img {
+    height: auto;
+    max-width: 35%;
+    padding: 16px;
+}
+
+.thesis-info {
+    max-width: 65%;
+    height: auto;
+    word-wrap: break-word; /* Fuerza a las palabras largas a saltar de línea */
+    padding-right: 8px;
+}
+
+.thesis-info h3 {
+    color: #424242;
+    font-size: 28px;
+    padding-bottom: 8px;
+}
+
+.thesis-info p {
+    color: #424242;
+    font-size: 16px;
+    padding-bottom: 8px;
+}
+
+#thesis-fisma {
+    background-color: #e0e0e0;
 }
