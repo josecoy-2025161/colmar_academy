@@ -675,4 +675,83 @@ footer {
         margin: 0px; /* Elimina los márgenes de desktop que lo empujaban */
     }
 
+    /* ==========================================================================
+        Thesis (Mobile)
+    ========================================================================== */
+
+    /* Contenedor exterior de la sección */
+    .thesis-exhibition {
+        width: 100%;
+        /* Resetea los paddings laterales de desktop para que el video pueda
+            ir de borde a borde de la pantalla de forma nativa. */
+        padding: 32px 0px; 
+        box-sizing: border-box;
+    }
+
+    /* Título de la sección */
+    .thesis-title {
+        text-align: center;
+        padding-bottom: 16px; 
+    }
+
+    .thesis-title h2 {
+        font-size: 24px; /* Tamaño adaptado para móvil */
+        font-weight: bold;
+        margin: 0;
+    }
+
+    /* Caja contenedora Flex */
+    .thesis-container {
+        flex-direction: column; /* Apila el contenido verticalmente */
+        width: 100%;
+    }
+
+    /* Bloque izquierdo (Video + Texto descriptivo) */
+    .thesis-content-left {
+        width: 100%;        /* Toma todo el ancho de la pantalla */
+        padding-right: 0px; /* Elimina el espacio de separación derecho de desktop */
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Video expandido a pantalla completa lateral */
+    .thesis-content-left video {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 24px; 
+    }
+
+    /* Bloque de texto inferior */
+    .thesis-words {
+        width: 100%;
+        /* Padding lateral para que el texto NO se pegue 
+        a los bordes de la pantalla del teléfono. */
+        padding: 0px 16px 0px 16px; 
+        box-sizing: border-box;
+    }
+
+    .thesis-words h2 {
+        font-size: 20px;
+        color: #424242;
+        padding-top: 0px; /* Resetea el padding superior de desktop */
+        margin: 0 0 8px 0;
+    }
+
+    .thesis-words p {
+        font-size: 14px;
+        line-height: 1.4;
+        padding-top: 0px;
+        margin: 0;
+    }
+
+    /* Oculta por completo toda la columna derecha en móvil   */
+    .thesis-content-right {
+        display: none;
+    }
+
+    /* ==========================================================================
+        Footer (Mobile)
+    ========================================================================== */
+    
 }
