@@ -447,14 +447,12 @@ footer {
         display: none;
     }
 
-    /*  Activamos la barra móvil */
+    /* Activa la barra móvil */
     .mobile-nav {
         display: flex;             
         justify-content: space-around; /* Distribuye los 4 iconos con espacios simétricos */
         align-items: center;       /* Centra los iconos verticalmente */
         background-color: #ffffff;
-        
-        /* Medidas exactas según tu wireframe */
         height: 64px;              
         width: 100%;
         box-sizing: border-box;
@@ -489,6 +487,7 @@ footer {
     header.hero {
         flex-direction: column; /* Cambia de fila a columna */
         background-color: #f5f5f5;
+        border-bottom: 0.1px solid #808080;
     }
 
     /* La imagen pasa a ocupar todo el ancho sin relleno*/
@@ -610,4 +609,70 @@ footer {
         font-size: 14px;
         display: inline-block;
     }
+
+    /* ==========================================================================
+        Courses (Mobile)
+    ========================================================================== */
+
+    /* Contenedor principal de la sección */
+    .courses-container {
+        background-color: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch; /* Estira el título y las cards a lo ancho */
+        width: 100%;
+        padding: 32px 16px; 
+        box-sizing: border-box;
+        border-top: 0.1px solid #808080;
+        border-bottom: 0.1px solid #808080;
+    }
+
+    /* Título principal */
+    .courses-title {
+        margin-bottom: 16px; 
+        text-align: center;   
+    }
+
+    .courses-title h2 {
+        font-size: 24px; /* Se reduce el tamaño para pantallas móviles */
+        margin: 0;
+    }
+
+    /* Contenedor de la lista de cursos */
+    .available-courses {
+        display: flex;
+        flex-direction: column; /* Apila los cursos uno abajo del otro */
+        width: 100%;
+        gap: 8px;
+    }
+
+    /* Transformación de la Tarjeta de Curso a Barra Horizontal Gris */
+    .course-card {
+        background-color: #e0e0e0;
+        width: 100%;    /* Ocupa todo el ancho disponible del contenedor */
+        margin: 0px;    /* Resetea los márgenes de desktop */
+        padding: 16px;             
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Oculta las imágenes de los cursos */
+    .course-card img {
+        display: none;
+    }
+
+    /* Oculta los párrafos */
+    .course-card p {
+        display: none;
+    }
+
+    /* Estilo del texto del curso dentro de la barra */
+    .course-card h3 {
+        color: #424242;
+        font-size: 16px;      
+        font-weight: bold;
+        margin: 0px; /* Elimina los márgenes de desktop que lo empujaban */
+    }
+
 }
